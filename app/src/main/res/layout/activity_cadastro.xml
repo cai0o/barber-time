@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cadastro"
+    android:windowSoftInputMode="adjustResize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp">
+
+
+        <!-- CARD DE CADASTRO -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#181818"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CADASTRO"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#F8F8F8"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Crie uma conta para acessar o aplicativo"
+                    android:textSize="13sp"
+                    android:textColor="#AAAAAA"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- NOME DE USUARIO -->
+                <EditText
+                    android:id="@+id/inputCadUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/bg_login_input"
+                    android:paddingHorizontal="14dp"
+                    android:hint="Nome de Usuário"
+                    android:textColor="#F8F8F8"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="text" />
+
+                <!-- ENDEREÇO DE EMAIL -->
+                <EditText
+                    android:id="@+id/inputCadEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/bg_login_input"
+                    android:paddingHorizontal="14dp"
+                    android:hint="Endereço de E-mail"
+                    android:textColor="#F8F8F8"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="text" />
+
+                <!-- SENHA -->
+                <EditText
+                    android:id="@+id/inputCadSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/bg_login_input"
+                    android:paddingHorizontal="14dp"
+                    android:hint="Senha"
+                    android:textColor="#F8F8F8"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:autofillHints="password" />
+
+                <!-- CONFIRMAR SENHA -->
+                <EditText
+                    android:id="@+id/inputConfSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/bg_login_input"
+                    android:paddingHorizontal="14dp"
+                    android:hint="Confirma Senha"
+                    android:textColor="#F8F8F8"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:autofillHints="password" />
+
+                <!-- BOTÃO CADASTRO -->
+                <Button
+                    android:id="@+id/btCadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="CADASTRAR USUÁRIO"
+                    android:textColor="#121212"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"
+                    android:backgroundTint="#F8F8F8"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- VOLTA PARA O LOGIN -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#181818"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Já tem uma conta?"
+                    android:textSize="14sp"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/btIrLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="VOLTAR PARA O LOGIN"
+                    android:textColor="#121212"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:backgroundTint="#F8F8F8"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

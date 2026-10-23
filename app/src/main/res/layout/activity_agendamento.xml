@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/agendamento"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true"
+    tools:context=".AgendamentoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="32dp">
+
+        <!-- CABEÇALHO -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOVO AGENDAMENTO"
+            android:textColor="#AAAAAA"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.14"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seu próximo corte começa aqui."
+            android:textColor="#F8F8F8"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="28dp" />
+
+        <!-- CARD DATA E HORÁRIO -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            app:cardBackgroundColor="#181818"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DATA E HORÁRIO"
+                    android:textColor="#F8F8F8"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.04"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- DATA -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha uma data"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/txtDataAgendamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_login_input"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:text="Selecione uma data"
+                    android:textColor="#F8F8F8"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="22dp" />
+
+                <!-- HORÁRIO -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha um horário"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="10dp" />
+
+                <Spinner
+                    android:id="@+id/spHorarioAgendamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_login_input"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CARD DE SERVIÇOS -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            app:cardBackgroundColor="#181818"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ESCOLHA O(S) SERVIÇO(S)"
+                    android:textColor="#F8F8F8"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.04"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selecione os serviços desejados"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="12dp" />
+
+                <CheckBox
+                    android:id="@+id/chkCorte"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Corte - R$ 35,00"
+                    android:textColor="#F8F8F8"
+                    android:textSize="14sp"
+                    android:buttonTint="#F8F8F8"
+                    android:paddingStart="4dp" />
+
+                <CheckBox
+                    android:id="@+id/chkBarba"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Barba - R$ 30,00"
+                    android:textColor="#F8F8F8"
+                    android:textSize="14sp"
+                    android:buttonTint="#F8F8F8"
+                    android:paddingStart="4dp" />
+
+                <CheckBox
+                    android:id="@+id/chkLavagem"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Lavagem e cuidados - R$ 20"
+                    android:textColor="#F8F8F8"
+                    android:textSize="14sp"
+                    android:buttonTint="#F8F8F8"
+                    android:paddingStart="4dp" />
+
+                <CheckBox
+                    android:id="@+id/chkPintura"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Pintura - R$ 100"
+                    android:textColor="#F8F8F8"
+                    android:textSize="14sp"
+                    android:buttonTint="#F8F8F8"
+                    android:paddingStart="4dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CARD DADOS DO CLIENTE -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#181818"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SEUS DADOS"
+                    android:textColor="#F8F8F8"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.04"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirme suas informações de contato"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NOME COMPLETO"
+                    android:textColor="#AAAAAA"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/txtNomeAgendamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_login_input"
+                    android:paddingHorizontal="14dp"
+                    android:hint="Digite seu nome"
+                    android:textColor="#F8F8F8"
+                    android:textColorHint="#777777"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="textPersonName"
+                    android:autofillHints="name" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TELEFONE"
+                    android:textColor="#AAAAAA"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/txtTelefoneAgendamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_login_input"
+                    android:paddingHorizontal="14dp"
+                    android:hint="(00) 00000-0000"
+                    android:textColor="#F8F8F8"
+                    android:textColorHint="#777777"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="phone"
+                    android:autofillHints="phone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- FINALIZAR -->
+
+        <Button
+            android:id="@+id/btFinalizarAgendamento"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="FINALIZAR AGENDAMENTO"
+            android:textColor="#121212"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:backgroundTint="#F8F8F8"
+            android:stateListAnimator="@null" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="BARBER TIME  •  SEU ESTILO"
+            android:textColor="#666666"
+            android:textSize="10sp"
+            android:letterSpacing="0.10" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BarberTime" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    </style>
+
+    <style name="Theme.BarberTime" parent="Base.Theme.BarberTime" />
+
+    <!-- Splash Screen -->
+    <style name="Theme.BarberTime.Splash"
+        parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">
+            @color/splash_background
+        </item>
+
+        <item name="windowSplashScreenAnimatedIcon">
+            @drawable/barber_time_logo
+        </item>
+
+        <item name="windowSplashScreenIconBackgroundColor">
+            @android:color/transparent
+        </item>
+
+        <item name="postSplashScreenTheme">
+            @style/Theme.BarberTime
+        </item>
+
+    </style>
+
+</resources>
